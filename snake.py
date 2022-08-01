@@ -1,5 +1,4 @@
 # --------- Import the Libraries ---------
-from turtle import position
 import pygame, sys, random
 from pygame.math import Vector2
 
