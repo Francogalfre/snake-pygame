@@ -2,7 +2,7 @@
 
 This is a project example of the game "Snake Game" built with Python.
 
-![logo](https://imgur.com/YU69PXY)
+![logo](https://i.imgur.com/YU69PXY.jpg)
 
 Hello, this project was made by Franco Galfre to practice my python skills. 🧶
 
