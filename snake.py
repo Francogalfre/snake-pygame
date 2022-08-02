@@ -1,4 +1,5 @@
 # --------- Import the Libraries ---------
+from email.mime import image
 import pygame, sys, random
 from pygame.math import Vector2
 
@@ -166,13 +167,13 @@ class MAIN:
     for block in self.snake.body[1:]:
       if block == self.snake.body[0]:
         self.game_over()
-  
+
   def game_over(self):
     self.snake.reset()
 
   def draw_grass(self):
     # Grass Color
-    grass_color = (170, 238, 15)
+    grass_color = (148, 206, 14)
 
     # Lots of Maths for the grass xd
     for row in range(cell_number):
@@ -206,9 +207,11 @@ class MAIN:
     pygame.draw.rect(screen, (73, 94, 23), bg_rect, 2)
 
 # --------- Define Constants ---------
+# Grid Size
 cell_size = 40
 cell_number = 20
 
+# Screen Configs
 screen = pygame.display.set_mode((cell_number * cell_size, cell_number * cell_size))
 pygame.display.set_caption("Snake Game 🐍")
 
@@ -228,6 +231,7 @@ game_font = pygame.font.Font('Font/PoetsenOne-Regular.ttf', 25)
 # --------- Starting the game ---------
 while True:
   for event in pygame.event.get():
+    # Quit the game
     if event.type == pygame.QUIT:
       pygame.quit()
       sys.exit()
@@ -263,5 +267,6 @@ while True:
   # Draw items
   main_game.draw_elements()
 
+  # Clock FPS
   pygame.display.update()
   clock.tick(60)
